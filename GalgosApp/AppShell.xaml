@@ -4,11 +4,64 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:GalgosApp"
-    Shell.FlyoutBehavior="Disabled">
+    BackgroundColor="LightGreen"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Home"
+        Title=""
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    <FlyoutItem Title="Horario">
+        <Tab Title="Horario">
+            <ShellContent Title="Lunes" ContentTemplate="{DataTemplate local:Horarios.Lunes}"/>
+            <ShellContent Title="Martes" ContentTemplate="{DataTemplate local:Horarios.Lunes}"/>
+            <ShellContent Title="Miercoles" ContentTemplate="{DataTemplate local:Horarios.Lunes}"/>
+            <ShellContent Title="Jueves" ContentTemplate="{DataTemplate local:Horarios.Lunes}"/>
+            <ShellContent Title="Viernes" ContentTemplate="{DataTemplate local:Horarios.Lunes}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Reticula">
+        <Tab Title="Semestre">
+            <ShellContent Title="Semestre 1" ContentTemplate="{DataTemplate local:Reticula.Semestre1}"/>
+            <ShellContent Title="Semestre 2" ContentTemplate="{DataTemplate local:Reticula.Semestre1}"/>
+            <ShellContent Title="Semestre 3" ContentTemplate="{DataTemplate local:Reticula.Semestre1}"/>
+            <ShellContent Title="Semestre 4" ContentTemplate="{DataTemplate local:Reticula.Semestre1}"/>
+            <ShellContent Title="Semestre 5" ContentTemplate="{DataTemplate local:Reticula.Semestre1}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Actividades Complementarias">
+        <Tab Title="Actividades Complementarias">
+            <ShellContent Title="Sistemas" ContentTemplate="{DataTemplate local:Complementarias.SistemasComplementarias}"/>
+            <ShellContent Title="Informatica" ContentTemplate="{DataTemplate local:Complementarias.SistemasComplementarias}"/>
+            <ShellContent Title="Civil" ContentTemplate="{DataTemplate local:Complementarias.SistemasComplementarias}"/>
+            <ShellContent Title="Industrial" ContentTemplate="{DataTemplate local:Complementarias.SistemasComplementarias}"/>
+            <ShellContent Title="Aeronautica" ContentTemplate="{DataTemplate local:Complementarias.SistemasComplementarias}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Proyectos">
+        <Tab Title="Proyectos">
+            <ShellContent Title="Proyectos" ContentTemplate="{DataTemplate local:Proyectos.ProyectosITT}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Acerca de">
+        <Tab Title="Acerca de">
+            <ShellContent Title="Acerca de" ContentTemplate="{DataTemplate local:Info.AcercaDe}"/>
+            
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Especialidades">
+        <Tab Title="Especialidades">
+            <ShellContent Title="Sistemas" ContentTemplate="{DataTemplate local:Especialidades.SistemasEspecialidades}"/>
+            <ShellContent Title="Informatica" ContentTemplate="{DataTemplate local:Especialidades.SistemasEspecialidades}"/>
+            <ShellContent Title="Civil" ContentTemplate="{DataTemplate local:Especialidades.SistemasEspecialidades}"/>
+            <ShellContent Title="Industrial" ContentTemplate="{DataTemplate local:Especialidades.SistemasEspecialidades}"/>
+            <ShellContent Title="Aeronautica" ContentTemplate="{DataTemplate local:Especialidades.SistemasEspecialidades}"/>
+        </Tab>
+    </FlyoutItem>
 
 </Shell>
