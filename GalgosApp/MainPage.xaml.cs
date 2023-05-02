@@ -1,9 +1,10 @@
-﻿namespace GalgosApp;
+﻿using GalgosApp.Horarios;
+
+namespace GalgosApp;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
+    
 	public MainPage()
 	{
 		InitializeComponent();
@@ -22,13 +23,13 @@ public partial class MainPage : ContentPage
             else
             {
                 DisplayAlert("Inicio", $"Bienvenido {user}", "Ok");
-                Navigation.PushAsync(new Materias());
+                Navigation.PushAsync(new Lunes());
             }
         }
         else if (entryNo_Control.Text == null || entryPassword.Text == null)
         {
             //DisplayAlert("Error", "No hay valores ingresados", "Ok");
-            Navigation.PushAsync(new Materias());
+            Navigation.PushAsync(new Lunes());
         }
     }
 }

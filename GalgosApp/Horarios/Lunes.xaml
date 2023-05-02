@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalgosApp.Horarios.Lunes"
+             Title="Materias">
+    <ScrollView>
+        <VerticalStackLayout>
+           
+            <CollectionView x:Name="colleciontView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="20" Padding="10" BackgroundColor="PeachPuff" Margin="20">
+                            <StackLayout Margin="20" Spacing="10"  >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding Nombre}" FontSize="25" Grid.Row="0" TextColor="Black" FontAttributes="Bold" Margin="5" HorizontalTextAlignment="Center" BackgroundColor="LightCyan"   />
+                                    <Label Text="{Binding Horario}" FontSize="20" Grid.Row="1" TextColor="Black" Margin="5,10" HorizontalTextAlignment="Center" />
+                                    <Label Text="{Binding Salon}" FontSize="20" Grid.Row="2" TextColor="Black" Margin="5,10" HorizontalTextAlignment="Center" />
+
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
